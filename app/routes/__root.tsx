@@ -67,7 +67,7 @@ export const Route = createRootRouteWithContext<{
 
 function RootComponent() {
   return (
-    <ClerkProvider>
+    <ClerkProvider publishableKey="pk_test_Y2xlcmsubWF4aW11bS5sb25naG9ybi0xMC5sY2wuZGV2JA">
       <RootDocument>
         <Outlet />
       </RootDocument>
