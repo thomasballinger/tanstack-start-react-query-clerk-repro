@@ -13,6 +13,7 @@ import { DefaultCatchBoundary } from '~/components/DefaultCatchBoundary'
 import { NotFound } from '~/components/NotFound'
 import appCss from '~/styles/app.css?url'
 import { seo } from '~/utils/seo'
+import { ClerkProvider } from '@clerk/tanstack-start';
 
 export const Route = createRootRouteWithContext<{
   queryClient: QueryClient
@@ -66,9 +67,11 @@ export const Route = createRootRouteWithContext<{
 
 function RootComponent() {
   return (
-    <RootDocument>
-      <Outlet />
-    </RootDocument>
+    <ClerkProvider>
+      <RootDocument>
+        <Outlet />
+      </RootDocument>
+    </ClerkProvider>
   )
 }
 
